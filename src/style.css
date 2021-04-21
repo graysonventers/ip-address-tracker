@@ -1,0 +1,126 @@
+body {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.topOfPage {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('../images/pattern-bg.png');
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 35vh;
+}
+
+.topOfPage h2 {
+    color: white;
+    font-weight: 500;
+    margin-top: 4vh;
+}
+
+.searchBar {
+    display: flex;
+}
+
+.searchBar input {
+    height: 60px;
+    width: 475px;
+    border: none;
+    border-radius: 15px 0  0 15px;
+    font-size: 18px;
+    padding-left: 50px;
+}
+
+.searchBar input:focus, textarea:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.searchBar button {
+    background-color: black;
+    height: 62px;
+    width: 60px;
+    border: none;
+    border-radius: 0 15px 15px 0;
+}
+
+.topOfPage button img {
+    height: 15px;
+    width: 15px;
+}
+
+/* informationCard */
+
+.informationCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    height: 200px;
+    width: 1100px;
+    position: absolute;
+    top: 25vh;
+    border-radius: 15px;
+    background-color: white;
+    z-index: 1;
+    padding: 0 40px 0 40px;
+}
+
+.informationCard div {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+.informationCard div:nth-child(2) {
+    border-left: solid #cecece 2px;
+    padding-left: 40px;
+}
+
+.informationCard div:nth-child(3) {
+    border-left: solid #cecece 2px;
+    padding-left: 40px;
+}
+
+.informationCard div:nth-child(4) {
+    border-left: solid #cecece 2px;
+    padding-left: 40px;
+}
+
+.informationCard h5 {
+    color: #888;
+    font-weight: 500;
+}
+
+.informationCard span {
+    font-size: 25px;
+    display: flex;
+    align-self: flex-start;
+}
+
+/* MAP SECTION */
+
+.mapSection {
+    height: 64.5vh;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
