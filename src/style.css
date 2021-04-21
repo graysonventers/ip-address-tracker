@@ -114,6 +114,7 @@ body {
 
 .mapSection {
     height: 64.5vh;
+    z-index: 0;
 }
 
 .attribution { 
