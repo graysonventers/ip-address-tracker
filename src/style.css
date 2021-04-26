@@ -38,6 +38,7 @@ body {
     border-radius: 15px 0  0 15px;
     font-size: 18px;
     padding-left: 50px;
+    cursor: pointer;
 }
 
 .searchBar input:focus, textarea:focus {
@@ -52,6 +53,7 @@ body {
     width: 60px;
     border: none;
     border-radius: 0 15px 15px 0;
+    cursor: pointer;
 }
 
 .topOfPage button img {
