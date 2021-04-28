@@ -21,8 +21,10 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     .addTo(myMap);
 
 const onClickButton = () => {
+    
     // check if incoming search is IP address or domain name
     const ipFormat = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+    
 
     if (inputString.value.match(ipFormat)) {
         ipAddressInput = inputString.value;
@@ -32,21 +34,32 @@ const onClickButton = () => {
     getGeolocation();
 }
 
+// initialize marker
+let marker;
+
 // import map
-function initialLoadMap(lat, long) {
+function loadMap(lat, long) {
     
     // set view on map with lat and long passed in from getGeolocation
     myMap.setView([lat, long], 13);
 
+    // set icon style
     const myIcon = L.icon({
         iconUrl: '../images/icon-location.svg',
-        // iconSize: [30, 40]
+        iconSize: [34, 40],
+        iconAnchor: [17, 40]
     })
-    L.marker([lat, long], {icon: myIcon}).addTo(myMap);
+
+    // remove current marker and reset marker on map
+    if (marker) {
+        marker.remove();
+    }
+    marker = L.marker([lat, long], {icon: myIcon}).addTo(myMap);
 }
 
 // call geolocationAPI
 async function getGeolocation() {
+    loadInformationCardData('--', '--', '--', '--'); 
     try {
         const res = await fetch(`https://geo.ipify.org/api/v1?apiKey=${api_key}&ipAddress=${ipAddressInput}&domain=${domainAddress}`, {
             method: 'GET'
@@ -64,13 +77,11 @@ async function getGeolocation() {
         const isp = data.isp;
 
         
-        initialLoadMap(latitude, longitude);
+        loadMap(latitude, longitude);
         loadInformationCardData(ipAddress, location, timezone, isp);        
-        
 
     } catch (error) {
         console.log(error.message)
-        // alert('IP address or domain is not valid')
     }
 }
 
