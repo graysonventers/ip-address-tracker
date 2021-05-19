@@ -14,7 +14,7 @@ let ipAddressInput = '';
 let domainAddress = '';
 
 // initialize map container
-let myMap = L.map('mapid');
+let myMap = L.map('mapid', { zoomControl: false });
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     })
@@ -28,6 +28,9 @@ const onClickButton = () => {
 
     if (inputString.value.match(ipFormat)) {
         ipAddressInput = inputString.value;
+    } else if (inputString.value === '') {
+        ipAddressInput = '';
+        domainAddress = '';
     } else {
         domainAddress = inputString.value;
     }
