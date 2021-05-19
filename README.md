@@ -1,6 +1,6 @@
 # Frontend Mentor - IP address tracker solution
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://ip-address-tracker-grayson.netlify.app/](https://ip-address-tracker-grayson.netlify.app/)
 
 This is a solution to the [IP address tracker challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0). 
 
