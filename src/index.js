@@ -1,3 +1,4 @@
+import './style.css'
 
 // DOM Elements
 const ipAddressSpan = document.getElementById('ipAddress');
