@@ -103,6 +103,6 @@ function loadInformationCardData (ip, location, timezone, isp) {
 
 window.addEventListener('load', getGeolocation);
 window.addEventListener('load', () => {
-    submitButton.innerHTML="<img src=iconArrow alt=`arrow` >"
+    submitButton.innerHTML=`<img src=${iconArrow} alt='arrow' >`
 })
 submitButton.addEventListener('click', onClickButton);
