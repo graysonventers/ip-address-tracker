@@ -10,9 +10,11 @@
   "author": "Grayson Venters",
   "license": "ISC",
   "dependencies": {
+    "css-loader": "^5.2.4",
     "dotenv": "^8.2.0",
     "leaflet": "^1.7.1",
     "lodash": "^4.17.21",
+    "style-loader": "^2.0.0",
     "webpack": "^5.37.1",
     "webpack-cli": "^4.7.0"
   }
