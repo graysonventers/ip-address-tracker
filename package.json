@@ -5,8 +5,6 @@
   "description": "frontend mentor project",
   "main": "script.js",
   "scripts": {
-    "build": "webpack",
-    "dev-server": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Grayson Venters",
