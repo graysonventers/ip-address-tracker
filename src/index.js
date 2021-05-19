@@ -1,4 +1,6 @@
 import './style.css'
+import iconMarker from '../images/icon-location.svg'
+
 
 // DOM Elements
 const ipAddressSpan = document.getElementById('ipAddress');
@@ -50,7 +52,7 @@ function loadMap(lat, long) {
 
     // set icon style
     const myIcon = L.icon({
-        iconUrl: '../images/icon-location.svg',
+        iconUrl: iconMarker,
         iconSize: [34, 40],
         iconAnchor: [17, 40]
     })
